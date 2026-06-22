@@ -4,7 +4,7 @@ BUILD_DIR      := ./build
 SRC_DIRS       := ./src
 
 CC             := gcc
-CFLAGS         := -Wall -Wextra -Werror -pedantic -std=c2x -O0 -g3
+CFLAGS         := -Wall -Wextra -Werror -pedantic -std=c23 -O0 -g3
 # See CFLAGS documentation below for more information on the flags used
 
 SRCS           := $(shell find $(SRC_DIRS) -name '*.c')
