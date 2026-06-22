@@ -36,7 +36,15 @@ clean:
 #    -Werror                : treats all warnings as errors, which can help enforce code quality
 #    -pedantic              : enables strict ISO C compliance, which can help catch non-standard code
 #    -std                   : specifies the C standard to use, e.g., -std=c99, -std=c11, etc.
-#    -O0                    : disables optimization, which can make debugging easier, use -O2 for release
+#	 -O?                    : sets the optimization level as per the table below
+#		-O0     : Disables optimization (default behavior)
+#		-O1     : Optimizes slightly without increasing build time
+#		-O2     : Optimizes heavily; standard for production builds
+#		-O3     : Optimizes aggressively; may increase binary size
+#		-Os     : Optimizes specifically for small file size
+#		-Oz     : Reduces size further than -Os
+#		-Og     : Optimizes while keeping debugging accurate
+#		-Ofast  : Disregards strict standard compliance for speed.
 #    -g                     : generates debug information for gdb while
 #    -g3                    : generates debug information for gdb and includes macro definitions
 #    -Wfloat-equal          : useful because usually testing floating-point numbers for equality is bad.
